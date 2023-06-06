@@ -28,7 +28,7 @@ IRrecv irrecv(kRecvPin, kCaptureBufferSize, kTimeout, true);
 decode_results results;
 
 void setup(){
-  M5.begin();
+  M5.begin(true, false, true, false);
 
   Serial.begin(kBaudRate, SERIAL_8N1);
   while(!Serial){
